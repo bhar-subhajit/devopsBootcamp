@@ -13,6 +13,8 @@ public class TestMessageService {
 	String a = "abcd";
 	MessageService ms = new MessageService();
 	
+	//JUnit Test Cases:
+	
 	@Test
 	public void testCaps() {
 		Assertions.assertEquals(ms.capitalise(a), "ABCD");
