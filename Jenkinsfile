@@ -1,6 +1,6 @@
 node{
     def docker = tool name: 'docker', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
-    def dockerCMD = “{$docker}/bin/docker”
+    def dockerCMD = “${docker}/bin/docker”
 
     stage('git checkout'){
         git 'https://github.com/bhar-subhajit/cicd-pipline-bootcamp.git'
