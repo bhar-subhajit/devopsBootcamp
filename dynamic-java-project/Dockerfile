@@ -1,5 +1,9 @@
 FROM tomcat:8.0
 
-MAINTAINER "subhoanindian@gmail.com"
+EXPOSE 9090
 
-COPY ./target/dynamic-java-project.war /usr/local/tomcat/webapps/
+ARG WAR_FILE=/target/*.war
+
+COPY ${WAR_FILE} /usr/local/tomcat/webapps
+
+MAINTAINER "subhoanindian@gmail.com"
